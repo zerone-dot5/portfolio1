@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/act3.css";
-import profileImg from "../img/act1-bg.jpg";
+import profileImg from "../img/tail.JPG";
 function Act3(props) {
   return (
     <div className="act3-container">
