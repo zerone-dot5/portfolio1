@@ -12,9 +12,10 @@
   position: absolute;
   width: 100%;
   height: 90%;
-  background-image: url(../img/act3-bg.png);
+  background-image: url(../img/act3-bg-v2-2.png);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   top: 5%;
 }
 
@@ -23,7 +24,7 @@
   width: 220px;
   height: 100%;
   left: 60%;
-  background-color: rgb(115, 194, 214);
+  background-color: rgba(60, 60, 60, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,7 +85,10 @@
 }
 
 .act3-bottom {
+  position: absolute;
   width: 100%;
-  height: 100%;
-  background-color: rgb(254, 255, 246);
+  height: 50%;
+  z-index: -1;
+  bottom: 0px;
+  background-color: rgb(238, 238, 238);
 }
