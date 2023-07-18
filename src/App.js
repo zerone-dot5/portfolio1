@@ -1,20 +1,27 @@
-import Act1 from "./components/act1";
-import Act2 from "./components/act2";
-import Act3 from "./components/act3";
-import Act4 from "./components/act4";
-import Act5 from "./components/act5";
-import Footer from "./components/footer";
-import "./css/App.css";
+import Footer from "./footer";
+import "../src/App.css";
+import Header from "./header";
+import Ch01 from "./Ch/ch-01";
+import Ch02 from "./Ch/ch-02";
+import Ch03 from "./Ch/ch-03";
+import Ch04 from "./Ch/ch-04";
+import Ch05 from "./Ch/ch-05";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Act1 />
-      <Act2 />
-      <Act3 />
-      <Act4 />
-      <Act5 />
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Ch01 />}></Route>
+          <Route path="/02" element={<Ch02 />}></Route>
+          <Route path="/03" element={<Ch03 />}></Route>
+          <Route path="/04" element={<Ch04 />}></Route>
+          <Route path="/05" element={<Ch05 />}></Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
