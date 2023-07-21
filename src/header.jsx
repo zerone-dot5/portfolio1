@@ -6,16 +6,34 @@ const headerList = ["01", "/02", "/03", "/04", "/05"];
 function Header(props) {
   const [list, setList] = useState("01");
   const [listColor, setListColor] = useState("white");
+  const [scroll, setScroll] = useState(0);
 
   const location = useLocation();
 
   let currentPath = "";
+
+  const updateScroll = () => {
+    setScroll(window.scrollY || document.documentElement.scrollTop);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", updateScroll);
+  }, []);
+  useEffect(() => {
+    if (location.pathname === "/02") {
+      if (scroll > 200) {
+        setListColor("white");
+      } else {
+        setListColor("black");
+      }
+    }
+  }, [scroll]);
 
   useEffect(() => {
     if (currentPath === location.pathname) window.location.reload();
 
     location.pathname === "/" ? setList("01") : setList(location.pathname);
     location.pathname === "/02" ? setListColor("black") : setListColor("white");
+    window.scrollTo(0, 0);
   }, [location]);
   return (
     <div className="header-container">

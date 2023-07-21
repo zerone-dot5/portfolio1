@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/item1.css";
 import bgGreen from "../img/japan1.png";
 import bgBlack from "../img/japan2.png";
@@ -24,6 +24,7 @@ function Item1(props) {
   const GreenHandle = () => {
     setBgColor(bgGreen);
   };
+
   return (
     <div className="item1-container">
       <div className="titleBox" style={{ height: height }}>
