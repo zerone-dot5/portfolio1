@@ -1,0 +1,164 @@
+.ch04-main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.ch04Box {
+  width: 90%;
+  height: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.box {
+  width: 250px;
+  height: 260px;
+  border: 1.5px solid rgb(233, 233, 233);
+  border-bottom: 2px solid red;
+  position: relative;
+  background-color: white;
+}
+
+.box p {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: 30px;
+}
+
+#css-js {
+  top: 20px;
+}
+#graphic {
+  top: -20px;
+}
+#my {
+  top: 0px;
+}
+
+.left-box1 {
+  position: absolute;
+  left: 1%;
+  bottom: 1%;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(52, 52, 57);
+}
+
+.left-box1-line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  border-left: 2px solid red;
+  left: -5%;
+}
+
+.right-box1 {
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(241, 241, 241);
+}
+.right-box1-circle {
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+.right-box2 {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  width: 150px;
+  height: 50px;
+  background-color: rgb(241, 241, 241);
+}
+.right-box2 p {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  font-size: 10px;
+  color: red;
+}
+
+.right-box2-square {
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid rgb(0, 0, 0);
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5px;
+}
+
+.name {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  color: rgb(207, 207, 207);
+}
+
+.css-js-bg {
+  opacity: 0;
+  z-index: -2;
+  width: 200px;
+  height: 500px;
+  position: absolute;
+  right: 5%;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 100px;
+  font-weight: 600;
+  line-height: 0.8; /* 글자 상하 여백 초기화 */
+  letter-spacing: -0.3em;
+  color: rgb(215, 215, 215);
+}
+
+.graphic-bg {
+  opacity: 0;
+  z-index: -2;
+  width: 200px;
+  height: 500px;
+  position: absolute;
+  left: 5%;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 100px;
+  font-weight: 600;
+  line-height: 0.8; /* 글자 상하 여백 초기화 */
+  letter-spacing: -0.3em;
+  color: rgb(215, 215, 215);
+}
+.my-bg {
+  opacity: 0;
+  z-index: -2;
+  width: 200px;
+  height: 500px;
+  position: absolute;
+  left: 5%;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 100px;
+  font-weight: 600;
+  line-height: 0.8; /* 글자 상하 여백 초기화 */
+  letter-spacing: -0.2em;
+  color: rgb(215, 215, 215);
+}

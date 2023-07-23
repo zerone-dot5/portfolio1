@@ -31,8 +31,14 @@ function Header(props) {
   useEffect(() => {
     if (currentPath === location.pathname) window.location.reload();
 
+    if (location.pathname === "/02" || location.pathname === "/04") {
+      setListColor("black");
+    } else {
+      setListColor("white");
+    }
+
     location.pathname === "/" ? setList("01") : setList(location.pathname);
-    location.pathname === "/02" ? setListColor("black") : setListColor("white");
+
     window.scrollTo(0, 0);
   }, [location]);
   return (
