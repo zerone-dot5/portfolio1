@@ -8,6 +8,8 @@ function Ch04Main(props) {
   const [box1Reset, setBox1Reset] = useState("50%");
   const [box1Border, setBox1Border] = useState(` rgb(233, 233, 233)`);
   const [box1bottomBorder, setBox1BottomBorder] = useState("red");
+  const [box1Opacity, setBox1Opacity] = useState(0);
+  const [box1Rotate, setBox1Rotate] = useState("0deg");
 
   const [box2Zindex, setBox2Zindex] = useState(2);
   const [box2Scale, setBox2Scale] = useState(1.0);
@@ -16,6 +18,8 @@ function Ch04Main(props) {
   const [box2Reset, setBox2Reset] = useState("50%");
   const [box2Border, setBox2Border] = useState(` rgb(233, 233, 233)`);
   const [box2bottomBorder, setBox2BottomBorder] = useState("red");
+  const [box2Opacity, setBox2Opacity] = useState(0);
+  const [box2Rotate, setBox2Rotate] = useState("0deg");
 
   const [box3Zindex, setBox3Zindex] = useState(1);
   const [box3Scale, setBox3Scale] = useState(1.0);
@@ -24,14 +28,18 @@ function Ch04Main(props) {
   const [box3Reset, setBox3Reset] = useState("50%");
   const [box3Border, setBox3Border] = useState(` rgb(233, 233, 233)`);
   const [box3bottomBorder, setBox3BottomBorder] = useState("red");
+  const [box3Opacity, setBox3Opacity] = useState(0);
+  const [box3Rotate, setBox3Rotate] = useState("0deg");
   const box1HoverHandle = () => {
     setBox1Scale(1.3);
-    setBox1Zindex(5);
+    setBox1Zindex(10);
     setBox1Bg("black");
     setBox1Color("white");
     setBox1Reset("");
     setBox1Border("black");
     setBox1BottomBorder("black");
+    setBox1Opacity(1);
+    setBox1Rotate("45deg");
   };
   const box1OutHandle = () => {
     setBox1Scale(1);
@@ -41,6 +49,8 @@ function Ch04Main(props) {
     setBox1Reset("50%");
     setBox1Border("rgb(233, 233, 233)");
     setBox1BottomBorder("red");
+    setBox1Opacity(0);
+    setBox1Rotate("0deg");
   };
 
   const box2HoverHandle = () => {
@@ -51,6 +61,8 @@ function Ch04Main(props) {
     setBox2Reset("");
     setBox2Border("black");
     setBox2BottomBorder("black");
+    setBox2Opacity(1);
+    setBox2Rotate("45deg");
   };
   const box2OutHandle = () => {
     setBox2Scale(1);
@@ -60,6 +72,8 @@ function Ch04Main(props) {
     setBox2Reset("50%");
     setBox2Border("rgb(233, 233, 233)");
     setBox2BottomBorder("red");
+    setBox2Opacity(0);
+    setBox2Rotate("0deg");
   };
 
   const box3HoverHandle = () => {
@@ -70,6 +84,8 @@ function Ch04Main(props) {
     setBox3Reset("");
     setBox3Border("black");
     setBox3BottomBorder("black");
+    setBox3Opacity(1);
+    setBox3Rotate("45deg");
   };
   const box3OutHandle = () => {
     setBox3Scale(1);
@@ -79,6 +95,8 @@ function Ch04Main(props) {
     setBox3Reset("50%");
     setBox3Border("rgb(233, 233, 233)");
     setBox3BottomBorder("red");
+    setBox3Opacity(0);
+    setBox3Rotate("0deg");
   };
   return (
     <div className="ch04-main-container">
@@ -87,6 +105,7 @@ function Ch04Main(props) {
           className="box"
           onMouseOver={box1HoverHandle}
           onMouseLeave={box1OutHandle}
+          style={{ zIndex: box1Zindex }}
         >
           <div
             className="css-js-tools"
@@ -96,34 +115,44 @@ function Ch04Main(props) {
               left: box1Reset,
             }}
           >
-            Icon1
+            <p> Text Icon</p>
           </div>
           <div
             className="css-js-tools"
             id="css-js-tool2"
-            style={{ top: box1Reset, left: box1Reset }}
+            style={{
+              top: box1Reset,
+              left: box1Reset,
+              opacity: box1Opacity,
+              transform: `rotate(${box1Rotate})`,
+            }}
           >
-            Icon2
+            <p> Icon</p>
           </div>
           <div
             className="css-js-tools"
             id="css-js-tool3"
-            style={{ top: box1Reset, left: box1Reset }}
+            style={{
+              top: box1Reset,
+              left: box1Reset,
+              opacity: box1Opacity,
+              transform: `rotate(${box1Rotate})`,
+            }}
           >
-            Text Icon
+            <p>Font</p>
           </div>
           <div
             className="css-js-tools"
             id="css-js-tool4"
             style={{ top: box1Reset, left: box1Reset }}
           >
-            Font
+            <p>Box Shadow</p>
           </div>
           <div
             id="css-js"
             style={{
               transform: `scale(${box1Scale})`,
-              zIndex: box1Zindex,
+
               backgroundColor: box1Bg,
               color: box1Color,
               border: `1.5px solid ${box1Border}`,
@@ -161,30 +190,46 @@ function Ch04Main(props) {
           <div
             className="graphic-tools"
             id="graphic-tool1"
-            style={{ top: box2Reset, left: box2Reset }}
+            style={{
+              top: box2Reset,
+              left: box2Reset,
+            }}
           >
-            Icon1
+            <p>
+              Free
+              <br /> <span>Img & Video</span>
+            </p>
           </div>
           <div
             className="graphic-tools"
             id="graphic-tool2"
-            style={{ top: box2Reset, left: box2Reset }}
+            style={{
+              top: box2Reset,
+              left: box2Reset,
+              opacity: box2Opacity,
+              transform: `rotate(${box2Rotate})`,
+            }}
           >
-            Icon1
+            <p>Free Image</p>
           </div>
           <div
             className="graphic-tools"
             id="graphic-tool3"
-            style={{ top: box2Reset, left: box2Reset }}
+            style={{
+              top: box2Reset,
+              left: box2Reset,
+              opacity: box2Opacity,
+              transform: `rotate(${box2Rotate})`,
+            }}
           >
-            Icon1
+            <p>Pinterest</p>
           </div>
           <div
             className="graphic-tools"
             id="graphic-tool4"
             style={{ top: box2Reset, left: box2Reset }}
           >
-            Icon1
+            <p> Color</p>
           </div>
         </div>
         <div
@@ -214,28 +259,38 @@ function Ch04Main(props) {
             id="media1"
             style={{ top: box3Reset, left: box3Reset }}
           >
-            Icon1
+            <p> Icon1</p>
           </div>
           <div
             className="medias"
             id="media2"
-            style={{ top: box3Reset, left: box3Reset }}
+            style={{
+              top: box3Reset,
+              left: box3Reset,
+              opacity: box3Opacity,
+              transform: `rotate(${box3Rotate})`,
+            }}
           >
-            Icon1
+            <p>Icon1</p>
           </div>
           <div
             className="medias"
             id="media3"
-            style={{ top: box3Reset, left: box3Reset }}
+            style={{
+              top: box3Reset,
+              left: box3Reset,
+              opacity: box3Opacity,
+              transform: `rotate(${box3Rotate})`,
+            }}
           >
-            Icon1
+            <p> Icon1</p>
           </div>
           <div
             className="medias"
             id="media4"
             style={{ top: box3Reset, left: box3Reset }}
           >
-            Icon1
+            <p> Icon1</p>
           </div>
         </div>
         <div className="left-box1">

@@ -1,6 +1,7 @@
 .ch04-main-container {
   width: 100%;
   height: 100vh;
+  min-width: 900px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,10 +46,9 @@
 #css-js {
   width: 250px;
   height: 260px;
-
   position: relative;
   background-color: white;
-  transition: 0.5s all;
+  transition: 0.5s all ease-in-out;
   transform: scale(1.3);
 }
 
@@ -62,50 +62,64 @@
   transform: translate(-50%, -50%);
   transition: 1s all;
   transition-delay: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+  border-radius: 5px;
+}
+.css-js-tools p {
+  opacity: 0.9;
 }
 
 #css-js-tool1 {
-  left: -45%;
+  left: 145%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: black;
   color: white;
-  font-size: 50px;
-  font-weight: 800;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("../img/text-icon.jpg");
+  background-position: center;
+  background-size: cover;
 }
 #css-js-tool2 {
-  left: -40%;
-  top: -40%;
+  left: 105%;
+  top: -60%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: black;
   color: white;
-  font-size: 50px;
-  font-weight: 800;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("../img/icon.jpg");
+  background-position: center;
+  background-size: cover;
 }
+
 #css-js-tool3 {
-  left: -20%;
-  top: 140%;
+  left: 110%;
+  top: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: black;
   color: white;
-  font-size: 50px;
-  font-weight: 800;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("../img/font.jpg");
+  background-position: center;
+  background-size: cover;
 }
 #css-js-tool4 {
-  left: 80%;
+  left: 50%;
   top: 140%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: black;
   color: white;
-  font-size: 50px;
-  font-weight: 800;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("../img/box-shadow.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 #graphic {
@@ -128,29 +142,73 @@
   transform: translate(-50%, -50%);
   transition: 1s all;
   transition-delay: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+  border-radius: 5px;
 }
-
+.graphic-tools p {
+  opacity: 0.9;
+  font-weight: 400;
+}
+.graphic-tools p span {
+  font-size: 25px;
+  position: relative;
+  left: 0px;
+}
 #graphic-tool1 {
   left: -45%;
   transition-delay: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/Img-Video.jpg");
+  background-position: center;
+  background-size: cover;
 }
 #graphic-tool2 {
-  left: -40%;
-  top: -40%;
+  left: -60%;
+  top: -65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/img.jpeg");
+  background-position: center;
+  background-size: cover;
 }
 #graphic-tool3 {
-  left: -20%;
-  top: 140%;
+  left: -60%;
+  top: 105%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  background-image: url("../img/pint.jpg");
+  background-position: center;
+  background-size: cover;
 }
 #graphic-tool4 {
-  left: 80%;
-  top: 140%;
+  left: 60%;
+  top: 145%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/color.jpeg");
+  background-position: center;
+  background-size: cover;
 }
 
 #my {
   width: 250px;
   height: 260px;
-
   position: relative;
   background-color: white;
   transition: 0.5s all;
@@ -167,23 +225,65 @@
   transform: translate(-50%, -50%);
   transition: 1s all;
   transition-delay: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+  border-radius: 5px;
+}
+
+.medias p {
+  opacity: 0.9;
 }
 
 #media1 {
   left: -45%;
   transition-delay: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("../img/icon.jpg");
+  background-position: center;
+  background-size: cover;
 }
 #media2 {
-  left: -40%;
-  top: -40%;
+  left: -60%;
+  top: -60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("../img/icon.jpg");
+  background-position: center;
+  background-size: cover;
 }
 #media3 {
-  left: -20%;
-  top: 140%;
+  left: -63%;
+  top: 103%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("../img/icon.jpg");
+  background-position: center;
+  background-size: cover;
 }
 #media4 {
-  left: 80%;
+  left: 60%;
   top: 140%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("../img/icon.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .left-box1 {
