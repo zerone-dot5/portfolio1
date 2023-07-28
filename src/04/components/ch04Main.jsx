@@ -10,6 +10,7 @@ function Ch04Main(props) {
   const [box1bottomBorder, setBox1BottomBorder] = useState("red");
   const [box1Opacity, setBox1Opacity] = useState(0);
   const [box1Rotate, setBox1Rotate] = useState("0deg");
+  const [cssJsOpacity, setCssJsOpacity] = useState(0);
 
   const [box2Zindex, setBox2Zindex] = useState(2);
   const [box2Scale, setBox2Scale] = useState(1.0);
@@ -20,6 +21,7 @@ function Ch04Main(props) {
   const [box2bottomBorder, setBox2BottomBorder] = useState("red");
   const [box2Opacity, setBox2Opacity] = useState(0);
   const [box2Rotate, setBox2Rotate] = useState("0deg");
+  const [graphicOpacity, setGraphicOpacity] = useState(0);
 
   const [box3Zindex, setBox3Zindex] = useState(1);
   const [box3Scale, setBox3Scale] = useState(1.0);
@@ -30,6 +32,13 @@ function Ch04Main(props) {
   const [box3bottomBorder, setBox3BottomBorder] = useState("red");
   const [box3Opacity, setBox3Opacity] = useState(0);
   const [box3Rotate, setBox3Rotate] = useState("0deg");
+  const [myopacicy, setMyOpacity] = useState(0);
+
+  const [rightBox2Bg, setRightBox2Bg] = useState(`rgb(241, 241, 241)`);
+  const [square, setSquare] = useState("5%");
+  const [circleBd, setCircleBd] = useState("black");
+  const [circleBg, setCircleBg] = useState("none");
+  const [rightBox1Bg, setRightBox1Bg] = useState(`rgb(241, 241, 241)`);
   const box1HoverHandle = () => {
     setBox1Scale(1.3);
     setBox1Zindex(10);
@@ -40,6 +49,7 @@ function Ch04Main(props) {
     setBox1BottomBorder("black");
     setBox1Opacity(1);
     setBox1Rotate("45deg");
+    setCssJsOpacity(0.5);
   };
   const box1OutHandle = () => {
     setBox1Scale(1);
@@ -51,6 +61,7 @@ function Ch04Main(props) {
     setBox1BottomBorder("red");
     setBox1Opacity(0);
     setBox1Rotate("0deg");
+    setCssJsOpacity(0);
   };
 
   const box2HoverHandle = () => {
@@ -63,6 +74,7 @@ function Ch04Main(props) {
     setBox2BottomBorder("black");
     setBox2Opacity(1);
     setBox2Rotate("45deg");
+    setGraphicOpacity(0.5);
   };
   const box2OutHandle = () => {
     setBox2Scale(1);
@@ -74,6 +86,7 @@ function Ch04Main(props) {
     setBox2BottomBorder("red");
     setBox2Opacity(0);
     setBox2Rotate("0deg");
+    setGraphicOpacity(0);
   };
 
   const box3HoverHandle = () => {
@@ -86,6 +99,7 @@ function Ch04Main(props) {
     setBox3BottomBorder("black");
     setBox3Opacity(1);
     setBox3Rotate("45deg");
+    setMyOpacity(0.5);
   };
   const box3OutHandle = () => {
     setBox3Scale(1);
@@ -97,7 +111,28 @@ function Ch04Main(props) {
     setBox3BottomBorder("red");
     setBox3Opacity(0);
     setBox3Rotate("0deg");
+    setMyOpacity(0);
   };
+
+  const rightBox2HoverHandle = () => {
+    setSquare(`50%`);
+    setRightBox2Bg("white");
+  };
+  const rightBox2OutHandle = () => {
+    setSquare(`5%`);
+    setRightBox2Bg(`rgb(241, 241, 241)`);
+  };
+  const rightBox1HoverHandle = () => {
+    setCircleBd("red");
+    setCircleBg("red");
+    setRightBox1Bg(`white`);
+  };
+  const rightBox1OutHandle = () => {
+    setCircleBd("black");
+    setCircleBg("transparent");
+    setRightBox1Bg(`rgb(241, 241, 241)`);
+  };
+
   return (
     <div className="ch04-main-container">
       <div className="ch04Box">
@@ -107,17 +142,20 @@ function Ch04Main(props) {
           onMouseLeave={box1OutHandle}
           style={{ zIndex: box1Zindex }}
         >
-          <div
+          <button
             className="css-js-tools"
             id="css-js-tool1"
             style={{
               top: box1Reset,
               left: box1Reset,
             }}
+            onClick={() =>
+              window.open("https://fonts.google.com/icons", "_blank")
+            }
           >
             <p> Text Icon</p>
-          </div>
-          <div
+          </button>
+          <button
             className="css-js-tools"
             id="css-js-tool2"
             style={{
@@ -126,10 +164,16 @@ function Ch04Main(props) {
               opacity: box1Opacity,
               transform: `rotate(${box1Rotate})`,
             }}
+            onClick={() =>
+              window.open(
+                "https://fontawesome.com/icons/youtube?s=solid&f=brands",
+                "_blank"
+              )
+            }
           >
             <p> Icon</p>
-          </div>
-          <div
+          </button>
+          <button
             className="css-js-tools"
             id="css-js-tool3"
             style={{
@@ -138,16 +182,23 @@ function Ch04Main(props) {
               opacity: box1Opacity,
               transform: `rotate(${box1Rotate})`,
             }}
+            onClick={() => window.open("https://fonts.google.com/", "_blank")}
           >
             <p>Font</p>
-          </div>
-          <div
+          </button>
+          <button
             className="css-js-tools"
             id="css-js-tool4"
             style={{ top: box1Reset, left: box1Reset }}
+            onClick={() =>
+              window.open(
+                "https://getcssscan.com/css-box-shadow-examples",
+                "_blank"
+              )
+            }
           >
             <p>Box Shadow</p>
-          </div>
+          </button>
           <div
             id="css-js"
             style={{
@@ -187,20 +238,23 @@ function Ch04Main(props) {
               Tools
             </p>
           </div>
-          <div
+          <button
             className="graphic-tools"
             id="graphic-tool1"
             style={{
               top: box2Reset,
               left: box2Reset,
             }}
+            onClick={() =>
+              window.open("https://www.pexels.com/ko-kr/", "_blank")
+            }
           >
             <p>
               Free
               <br /> <span>Img & Video</span>
             </p>
-          </div>
-          <div
+          </button>
+          <button
             className="graphic-tools"
             id="graphic-tool2"
             style={{
@@ -209,10 +263,11 @@ function Ch04Main(props) {
               opacity: box2Opacity,
               transform: `rotate(${box2Rotate})`,
             }}
+            onClick={() => window.open("https://unsplash.com/ko", "_blank")}
           >
             <p>Free Image</p>
-          </div>
-          <div
+          </button>
+          <button
             className="graphic-tools"
             id="graphic-tool3"
             style={{
@@ -221,16 +276,22 @@ function Ch04Main(props) {
               opacity: box2Opacity,
               transform: `rotate(${box2Rotate})`,
             }}
+            onClick={() =>
+              window.open("https://www.pinterest.co.kr/", "_blank")
+            }
           >
             <p>Pinterest</p>
-          </div>
-          <div
+          </button>
+          <button
             className="graphic-tools"
             id="graphic-tool4"
             style={{ top: box2Reset, left: box2Reset }}
+            onClick={() =>
+              window.open("https://color.adobe.com/ko/create", "_blank")
+            }
           >
             <p> Color</p>
-          </div>
+          </button>
         </div>
         <div
           className="box"
@@ -254,14 +315,15 @@ function Ch04Main(props) {
               Medias
             </p>
           </div>
-          <div
+          <button
             className="medias"
             id="media1"
             style={{ top: box3Reset, left: box3Reset }}
+            onClick={() => window.open("https://github.com/", "_blank")}
           >
-            <p> Icon1</p>
-          </div>
-          <div
+            <p> GitHub</p>
+          </button>
+          <button
             className="medias"
             id="media2"
             style={{
@@ -270,10 +332,11 @@ function Ch04Main(props) {
               opacity: box3Opacity,
               transform: `rotate(${box3Rotate})`,
             }}
+            onClick={() => window.open("https://www.instagram.com/", "_blank")}
           >
-            <p>Icon1</p>
-          </div>
-          <div
+            <p>Instagram</p>
+          </button>
+          <button
             className="medias"
             id="media3"
             style={{
@@ -282,15 +345,21 @@ function Ch04Main(props) {
               opacity: box3Opacity,
               transform: `rotate(${box3Rotate})`,
             }}
+            onClick={() =>
+              window.open(
+                "https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0",
+                "_blank"
+              )
+            }
           >
-            <p> Icon1</p>
-          </div>
+            <p> Blog</p>
+          </button>
           <div
             className="medias"
             id="media4"
             style={{ top: box3Reset, left: box3Reset }}
           >
-            <p> Icon1</p>
+            <p> 준비중</p>
           </div>
         </div>
         <div className="left-box1">
@@ -298,24 +367,42 @@ function Ch04Main(props) {
           <p>The tools and media I use</p>
           <p>I don't know what to write in one line</p>
         </div>
-        <div className="right-box1">
-          <div className="right-box1-circle"></div>
+        <div
+          className="right-box1"
+          onMouseOver={rightBox1HoverHandle}
+          onMouseLeave={rightBox1OutHandle}
+          style={{ backgroundColor: rightBox1Bg }}
+        >
+          <div
+            className="right-box1-circle"
+            style={{
+              border: ` 1.5px solid ${circleBd}`,
+              backgroundColor: circleBg,
+            }}
+          ></div>
         </div>
-        <div className="right-box2">
+        <div
+          className="right-box2"
+          onMouseOver={rightBox2HoverHandle}
+          onMouseLeave={rightBox2OutHandle}
+          style={{ backgroundColor: rightBox2Bg }}
+        >
           <p>Zero</p>
-          <div className="right-box2-square">Zr</div>
+          <div className="right-box2-square" style={{ right: square }}>
+            Zr
+          </div>
         </div>
         <div className="name">Kim Young Il</div>
       </div>
-      <div className="css-js-bg">
+      <div className="css-js-bg" style={{ opacity: cssJsOpacity }}>
         <p>CSS</p>
         <p>&JS</p>
       </div>
-      <div className="graphic-bg">
+      <div className="graphic-bg" style={{ opacity: graphicOpacity }}>
         <p>Grap</p>
         <p>hic</p>
       </div>
-      <div className="my-bg">
+      <div className="my-bg" style={{ opacity: myopacicy }}>
         <p>Media</p>
       </div>
     </div>
